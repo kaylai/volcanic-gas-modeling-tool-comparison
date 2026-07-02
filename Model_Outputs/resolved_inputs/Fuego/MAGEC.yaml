@@ -1,0 +1,42 @@
+input_first_row:
+  Run_ID: Fuego_1
+  T_degas (C): 1030.0
+  P_final (kbar): 0.001
+  P_degas (kbar): 7.0
+  Initial redox options: Fe3+/FeT
+  Initial redox values: 0.24
+  Reference P (kbar): null
+  melt_SiO2 (wt%): 51.46
+  melt_TiO2 (wt%): 1.06
+  melt_Al2O3 (wt%): 17.43
+  melt_Cr2O3 (wt%): 0.0
+  melt_FeOT (wt%): 9.42
+  melt_MgO (wt%): 3.78
+  melt_MnO (wt%): 0.19
+  melt_CaO (wt%): 7.99
+  melt_Na2O (wt%): 3.47
+  melt_K2O (wt%): 0.78
+  melt_P2O5 (wt%): 0.24
+  Bulk_H (wt%): 0.5
+  Bulk_C (wt%): 0.09
+  Bulk_S (wt%): 0.265
+  Reference: auto_satP
+n_pressure_steps: 100
+p_grid_kbar_first_last:
+- 7.0
+- 0.001
+settings:
+  solver_opt: 2.0
+  sat_sulfide: 0.0
+  sat_sulfate: 0.0
+  sat_graphite: 0.0
+  Fe32_opt: 1.0
+  S62_opt: 1.0
+  SCSS_opt: 1.0
+  S2max_opt: 1.0
+  CO2_opt: 1.0
+  H2O_opt: 1.0
+  CO_opt: 1.0
+  adiabat_r: 0.0
+  ideal: 1.0
+  buffer: 0.0

@@ -1,0 +1,36 @@
+composition_oxides:
+  SiO2: 47.4
+  TiO2: 1.01
+  Al2O3: 17.64
+  FeOT: 7.98
+  MnO: 0.0
+  MgO: 7.63
+  CaO: 12.44
+  Na2O: 2.65
+  K2O: 0.03
+  P2O5: 0.08
+T_K: 1373.15
+H2O_wt: 0.2
+CO2_ppm: 1100.0
+S_ppm: 1419.9999999999998
+delta_FMQ: -1.2
+params:
+  coh_model: 0
+  crystallization: 0
+  fo2_tracker: 1
+  s_fe_choice: 100.0
+  sigma: 0.01
+  sulfide_pre: 0
+  slope_h2o: -0.3396
+  constant_h2o: 2.7
+  n_steps: 600
+  open_degassing: 0
+  d34s_initial: 0.0
+  kd_low_p_increment: 10.0
+  kd_low_p_threshold_mpa: 5.0
+sulfide:
+  Fe: 65.43
+  Ni: 0.0
+  Cu: 0.0
+  O: 0.0
+  S: 36.47
