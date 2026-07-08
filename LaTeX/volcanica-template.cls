@@ -541,6 +541,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \usepackage{tabularx}
+% \usepackage{refcheck}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 

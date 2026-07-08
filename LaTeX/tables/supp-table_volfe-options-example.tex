@@ -1,12 +1,12 @@
-\begin{table}[]
+\begin{table}[!thbp]
     \centering
     \caption{Parameterizations used for model dependent variables in degassing calculations using VolFe.}
-    \label{tab:volfe-models}
     \begin{tabular}{ll}
         \toprule
         Variable &	Reference \\
         \midrule
         \multicolumn{2}{l}{Fugacity coefficients} \\
+        \midrule
         O$_2$ &	\textcite{shi1992} \\
         CO &	\textcite{shi1992} \\
         H$_2$ &	\textcite{shaw1964} \\
@@ -47,7 +47,7 @@
         \multicolumn{2}{l}{Other} \\
         \midrule
         S$^{2-}$CSS &	Eq. (10.34, 10.43, 10.45, 10.46) in \textcite{o2021thermodynamic} \\
-        S$^{6+}$CAS &	\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Eq. (8) in \textcite     {chowdhury2019effect} using PySulfSat v1.0.2 \\ \parencite{wieser2023pysulfsat}\end{tabular}} \\ 
-
+        S$^{6+}$CAS &	Eq. (8) in \textcite{chowdhury2019effect} using PySulfSat v1.0.2 \parencite{wieser2023pysulfsat}  \\
+        \bottomrule
 \end{tabular}
 \end{table}
