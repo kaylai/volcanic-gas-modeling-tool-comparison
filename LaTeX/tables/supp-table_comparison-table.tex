@@ -1,0 +1,309 @@
+\begin{landscape}
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+
+% --- one place to control geometry -------------------------
+\newlength{\firstcol}\setlength{\firstcol}{1.6cm}
+\newlength{\toolcol}\setlength{\toolcol}{3.6cm}
+% span width = all 6 column widths + 5 interior gaps (10\tabcolsep)
+\newlength{\spanwidth}
+\setlength{\spanwidth}{\dimexpr\firstcol+5\toolcol+10\tabcolsep\relax}
+
+% center the longtable on the page
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+
+% shaded full-width section header, defined once
+\newcommand{\sectionrow}[1]{%
+  \multicolumn{6}{@{}p{\dimexpr\spanwidth+2\tabcolsep\relax}@{}}%
+  {\cellcolor[HTML]{D9D9D9}\textit{\textbf{#1}}}}
+
+\begin{longtable}{p{\firstcol}p{\toolcol}p{\toolcol}p{\toolcol}p{\toolcol}p{\toolcol}}
+
+% ---------- caption + first-page header --------------------
+\caption{Model parameterizations used by each tool. See notes
+and reference key below the table.}
+\label{table:table_comparison-table}\\
+\toprule
+Parameter & VolFe & Sulfur\_X & D-Compress & MAGEC & EVo \\
+\midrule
+\endfirsthead
+
+% ---------- header repeated on continuation pages ----------
+\multicolumn{6}{@{}l}{\footnotesize\itshape Table
+\ref{table:table_comparison-table}, continued.}\\
+\toprule
+Parameter & VolFe & Sulfur\_X & D-Compress & MAGEC & EVo \\
+\midrule
+\endhead
+
+% ---------- footer on all but the last page ----------------
+\midrule
+\multicolumn{6}{r@{}}{\footnotesize\itshape continued on next page}\\
+\endfoot
+
+% ---------- footer on the last page -------------------------
+\bottomrule
+\endlastfoot
+
+% ============================================================
+\sectionrow{SOLUBILITY}\\
+\addlinespace[2pt]
+H$_2$O &
+  H24 FigS2 * &
+  IM12 Eq11$^1$ * &
+  IM12 Eq11$^1$ * &
+  IM12 Eq11$^2$ * &
+  B15 Tab1-basalt * \\
+CO$_2$ &
+  $^{\xi,\zeta,\theta}$D95 $^{\psi}$TH94 * &
+  IM12 Eq7$^1$ * &
+  IM12 Eq7$^1$ * &
+  IM12 Eq7$^1$ * &
+  B15 Tab1-basalt * \\
+S$^{2-}$ &
+  O21 Eq10.34$^3$ * &
+  D23 Tab3-RxnI &
+  N/A &
+  N99 Eq3 * &
+  O21 Eq10.34 * \\
+S$^{6+}$ &
+  OM22 Eq12a$^3$ * &
+  D23 Tab3-RxnII &
+  N/A &
+  N/A &
+  N/A \\
+SO$_2$ &
+  N/A &
+  N/A &
+  B15 Tab1-basalt * &
+  N/A &
+  N/A \\
+H$_2$S &
+  H24 FigS6-basalt * &
+  N/A &
+  B15 Tab1-basalt * &
+  N/A &
+  N/A \\
+H$_2$ &
+  H24 TabS4-basalt * &
+  N/A &
+  B15 Tab1-basalt * &
+  G03 Sec5.4 &
+  G03 Sec5.4 * \\
+CH$_4$ &
+  A13 Eq7a &
+  N/A &
+  0 * &
+  A13 Eq7a &
+  A13 Eq7a \\
+CO &
+  H24 TabS4 &
+  N/A &
+  0 * &
+  A15 Eq10 &
+  A15 Eq10 \\
+O$_2$ &
+  N/A &
+  N/A &
+  0 * &
+  N/A &
+  N/A \\
+S$_2$ &
+  N/A &
+  N/A &
+  0 * &
+  N/A &
+  N/A \\
+\addlinespace[6pt]
+
+% ============================================================
+\sectionrow{MELT SPECIATION}\\
+\addlinespace[2pt]
+Fe$^{3+}$/$\Sigma$Fe &
+  KC91 EqA5+A6 &
+  KC91 Eq7 &
+  KC91 Eq7$^4$ &
+  SY24 Eq6-9+Tab2 * &
+  KC91 Eq7 \\
+S$^{6+}$/$\Sigma$S &
+  N/A * &
+  \makecell[lt]{$^{\xi,\psi}$MW21 $^{\zeta}$MW21$^{5}$\\$^{\theta}$OM22 Eq13 *} &
+  N/A &
+  SY24 Eq10 * &
+  N19 Eq11 * \\
+\addlinespace[6pt]
+
+% ============================================================
+\sectionrow{FUGACITY COEFFICIENT}\\
+\addlinespace[2pt]
+H$_2$O &
+  HP91 Eq4+6+A1-3+Tab1 * &
+  SS92 * &
+  HP91 EqA2-3 &
+  PR76 Eq15 &
+  HP91 \\
+CO$_2$ &
+  SS92 * &
+  N/A &
+  SS92 &
+  SS92 &
+  HP91 \\
+SO$_2$ &
+  SS92$^6$ * &
+  SS92 &
+  SS92 &
+  SS92 &
+  SS92 \\
+H$_2$S &
+  SS92$^7$ * &
+  SS92 &
+  SS92 &
+  SS92 &
+  SS92 \\
+O$_2$ &
+  SS92 * &
+  N/A &
+  SS92 &
+  SS92 &
+  SS92 \\
+H$_2$ &
+  SW64 Eq4 * &
+  N/A &
+  SW64 Eq4 &
+  SS92 &
+  SW64 Eq4 \\
+CO &
+  SS92 * &
+  N/A &
+  SS92 &
+  SS92 &
+  SS92 \\
+CH$_4$ &
+  SS92 * &
+  N/A &
+  SS92 &
+  SS92 &
+  SS92 \\
+S$_2$ &
+  SS92 * &
+  N/A &
+  SS92 &
+  SS92 &
+  SS92 \\
+OCS &
+  SS92 * &
+  N/A &
+  N/A &
+  SS92 &
+  N/A \\
+\addlinespace[6pt]
+
+% ============================================================
+\sectionrow{EQUILIBRIUM CONSTANTS}\\
+\addlinespace[2pt]
+$K_{\mathrm{H_2O}}$ &
+  OK77 Tab1-d &
+  N/A &
+  OK77 Tab1-d &
+  SL22$^8$ &
+  EVo RTD$^9$ \\
+$K_{\mathrm{CO_2}}$ &
+  OK77 Tab1-c &
+  N/A &
+  OK77 Tab1-c &
+  SL22$^8$ &
+  EVo RTD$^9$ \\
+$K_{\mathrm{H_2S}\text{-}1}$ &
+  OK77 Tab1-h * &
+  N/A &
+  OK77 Tab1-h &
+  SL22$^8$ &
+  EVo RTD$^9$ \\
+$K_{\mathrm{H_2S}\text{-}2}$ &
+  N/A &
+  D23 Eq4 &
+  N/A &
+  N/A &
+  N/A \\
+$K_{\mathrm{SO_2}}$ &
+  OK77 Tab1-f * &
+  N/A &
+  OK77 Tab1-f &
+  SL22$^8$ &
+  EVo RTD$^9$ \\
+$K_{\mathrm{CH_4}}$ &
+  OK77 Tab1-e * &
+  N/A &
+  OK77 Tab1-e &
+  SL22$^8$ &
+  EVo RTD$^9$ \\
+$K_{\mathrm{OCS}}$ &
+  M19 Eq8 &
+  N/A &
+  N/A &
+  SY24$^8$ &
+  N/A \\
+\addlinespace[6pt]
+
+% ============================================================
+\sectionrow{OXYGEN FUGACITY}\\
+\addlinespace[2pt]
+NNO &
+  F91 Tab1 &
+  N/A &
+  F91 Tab1 &
+  H08 Tab7$^{10}$ &
+  F91 Tab1 \\
+FMQ &
+  F91 Tab1-FM$\beta$Q * &
+  F91 Tab1-FM$\beta$Q &
+  F91 Tab1-FM$\beta$Q$^{11}$ &
+  H08 Tab7$^{12}$ &
+  F91 Tab1-FM$\beta$Q \\
+Redox input options &
+  \makecell[lt]{Fe$^{3+}$/$\Sigma$Fe\\FeO + Fe$_2$O$_3$\\$\Delta$FMQ\\$\Delta$NNO\\log$_{10}f$O$_2$\\S$^{6+}$/$\Sigma$S} &
+  $\Delta$FMQ &
+  $\Delta$NNO &
+  \makecell[lt]{log$_{10}f$O$_2$\\Fe$^{3+}$/$\Sigma$Fe\\S$^{6+}$/$\Sigma$S\\$\Delta$IW\\$\Delta$FMQ\\$\Delta$NNO} &
+  \makecell[lt]{Fe$^{3+}$/$\Sigma$Fe\\FeO + Fe$_2$O$_3$\\$\Delta$FMQ\\$\Delta$NNO\\$f$O$_2$ (bar)} \\
+\end{longtable}
+
+% ---------- notes, constrained to table width ----------------
+\vspace{-0.5\baselineskip}
+\begin{center}
+\begin{minipage}{\spanwidth}
+\footnotesize
+Notes: Parameterisations used for all calculations, except where
+specified for individual melt compositions: $^{\xi}$MORB,
+$^{\zeta}$K\={\i}lauea, $^{\theta}$Fuego, and $^{\psi}$Fogo.
+* Indicates other parameterizations are available within the tool.
+$^1$Hydrous parameters; $^2$Hydrous web-app parameters;
+$^3$Including H$_2$O dilution; $^4$At 1 bar; $^5$Using 6.5 as the
+last constant value; $^6$As modified in Fig.~S1 of
+\parencite{Hughes2023}; $^7$As modified in Fig.~S1 of
+\parencite{hughes2024}; $^8$Based on NIST-JANAF tables
+\parencite{janaf1996}; $^{9}$Based on JANAF tables
+\parencite{janaf1998}; $^{10}$References of
+\textcite{o1993thermodynamic,Frost1991}; $^{11}$For this study only
+because not included in the original tool; $^{12}$References of
+\textcite{Oneill1987}.
+
+\smallskip
+References: A13 \parencite{ardia2013}; A15
+\parencite{armstrong2015speciation}; B15 \parencite{Burgisser2015};
+D95 \parencite{dixon1995}; D23 \parencite{Ding2023}; EVo RTD
+(\url{https://evo-outgas.readthedocs.io}); F91 \parencite{Frost1991};
+G03 \parencite{Gaillard2003}; H08 \parencite{hirschmann2008-LEPR};
+HP91 \parencite{holland1991}; H24 \parencite{hughes2024}; IM12
+\parencite{IaconoMarziano2012}; KC91 \parencite{Kress1991}; M19
+\parencite{moussallam2019}; MW21 \parencite{Muth2021}; N99
+\parencite{nzotta1999}; N19 \parencite{Nash2019}; OK77
+\parencite{ohmoto1977}; O21 \parencite{o2021thermodynamic}; OM22
+\parencite{Oneill2022}; PR76 \parencite{peng1976}; SW64
+\parencite{shaw1964}; SS92 \parencite{shi1992}; SL22
+\parencite{Sun2022}; SY24 \parencite{Sun2024}; TH94
+\parencite{thibault1994solubility}.
+\end{minipage}
+\end{center}
+\end{landscape}

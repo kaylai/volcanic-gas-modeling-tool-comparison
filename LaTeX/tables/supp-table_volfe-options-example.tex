@@ -1,0 +1,53 @@
+\begin{table}[]
+    \centering
+    \caption{Parameterizations used for model dependent variables in degassing calculations using VolFe.}
+    \label{tab:volfe-models}
+    \begin{tabular}{ll}
+        \toprule
+        Variable &	Reference \\
+        \midrule
+        \multicolumn{2}{l}{Fugacity coefficients} \\
+        O$_2$ &	\textcite{shi1992} \\
+        CO &	\textcite{shi1992} \\
+        H$_2$ &	\textcite{shaw1964} \\
+        S$_2$ &	\textcite{shi1992} \\
+        CO$_2$ &	\textcite{shi1992} \\
+        H$_2$O &	Eq. (4, 6: T $>$ 673 K, A1-3) \& Table 1 in \textcite{holland1991} \\
+        SO$_2$ &	\textcite{shi1992} as modified in Fig. S1 of \textcite{Hughes2023} \\
+        CH$_4$ &	\textcite{shi1992} \\
+        H$_2$S &	\textcite{shi1992} as modified in Fig. S1 of \textcite{hughes2024} \\
+        OCS &	\textcite{shi1992} \\
+        \midrule
+        \multicolumn{2}{l}{Homogeneous vapor equilibrium constants} \\
+        \midrule
+        CO$_2$ &	Reaction (c) in Table 1 of \textcite{ohmoto1977} \\
+        H$_2$O &	Reaction (d) in Table 1 of \textcite{ohmoto1977} \\
+        SO$_2$ &	Reaction (f) in Table 1 of \textcite{ohmoto1977} \\
+        CH$_4$ &	Reaction (e) in Table 1 of \textcite{ohmoto1977} \\
+        H$_2$S &	Reaction (h) in Table 1 of \textcite{ohmoto1977} \\
+        OCS &	Eq. (8) in \textcite{moussallam2019} \\
+        \midrule
+        \multicolumn{2}{l}{Solubility functions} \\
+        \midrule
+        H$_2$O$_T$ &	Fig. S2 in \textcite{hughes2024} \\
+        CO$_{2,T}$ &	Bullet (5) in \textcite{dixon1995} \\
+        H$_{2,mol}$ &	Basalt from Table S4 in \textcite{hughes2024} \\
+        CO$_{mol}$ &	Table S4 in \textcite{hughes2024} \\
+        CH$_{4,mol}$ &	Eq. (7a) from \textcite{ardia2013} \\
+        *S$^{2-}$ &	Eq. (10.43) from \textcite{o2021thermodynamic} (including H$_2$O dilution) \\
+        SO$_4^{2-}$ &	Eq. (12a) from \textcite{Oneill2022} (including H$_2$O dilution) \\
+        H$_2$S$_{mol}$ &	Basalt from Fig. S6 in \textcite{hughes2024} \\
+        \midrule
+        \multicolumn{2}{l}{$f$O$_2$ related parameters} \\
+        \midrule
+        Fe$^{3+}$/Fe${_T}$ &	Eq. (A-5, 6) from \textcite{Kress1991} (no H$_2$O dilution) \\
+        FMQ &	FM$\beta$Q in Table 1 of \textcite{Frost1991}\\
+        NNO &	NiNiO in Table 1 of \textcite{Frost1991} \\
+        \midrule
+        \multicolumn{2}{l}{Other} \\
+        \midrule
+        S$^{2-}$CSS &	Eq. (10.34, 10.43, 10.45, 10.46) in \textcite{o2021thermodynamic} \\
+        S$^{6+}$CAS &	\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Eq. (8) in \textcite     {chowdhury2019effect} using PySulfSat v1.0.2 \\ \parencite{wieser2023pysulfsat}\end{tabular}} \\ 
+
+\end{tabular}
+\end{table}
