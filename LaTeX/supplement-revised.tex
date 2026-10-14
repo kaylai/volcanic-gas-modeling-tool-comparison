@@ -67,7 +67,7 @@ Department of Earth Sciences, University College London, London, WC1E 6BT, UK.
 }
 
 \affil[{{\affiliation{3}}}]{
-Earth Sciences New Zealand, Te Awa Kairangi ki Tai Lower Hutt, 3351, Aotearoa New Zealand.}
+Earth Sciences New Zealand – Te Whatu Ao, Wairakei Research Centre, Taupō, New Zealand}
 
 \affil[{{\affiliation{4}}}]{
 Department of Earth and Planetary Science, University of California Berkeley, Berkeley, CA, US.
@@ -78,15 +78,15 @@ Univ. Grenoble Alpes, Univ. Savoie Mont Blanc, CNRS, IRD, Univ. Gustave Eiffel, 
 }
 
 \affil[{{\affiliation{6}}}]{
-University of Oxford, Oxford OX1 2JD, UK.
+Oxford Research Software Engineering Group, MPLS Doctoral Training Centre, University of Oxford, Oxford OX1 2JD, UK.
 }
 
 \affil[{{\affiliation{7}}}]{
-University of Florida, Gainesville, FL, 32611, US.
+Department of Geological Sciences, University of Florida, Gainesville, FL, 32611, US.
 }
 
 \affil[{{\affiliation{8}}}]{
-University of Texas, Austin, TX, 78712, US.
+Department of Earth and Planetary Sciences, Jackson School of Geosciences, University of Texas, Austin, TX, 78712, US.
 }
 
 %------------------------------------------------------------
@@ -112,6 +112,22 @@ All of these materials are available through the journal's repository and in the
     \item Jupyter notebook for describing how starting compositions were chosen from the full datasets: ``\url{Melt\_Inclusions/Choosing\_MI\_Kilauea.ipynb}''
     
 \end{enumerate}
+
+\section{Description of Basaltic Systems}
+
+%% MORB
+Mid-ocean ridge basalts are represented by whole rock lava samples and representative MORB volatile concentrations. Major element data are from Lamont Seamount Chain lavas and adjacent East Pacific Rise lavas originally reported in \textcite{Allan1989}. This is the same composition used in the parametrization database for MagmaSat MELTS \parencite{GhiorsoGualda2015} and in the review by \textcite{WieserVESIcal2022}. Temperature and volatile contents were chosen from representative MORB samples reported in \textcite{cottrell2021morb}. Fe$^{3+}$/$\Sigma$Fe was set at 0.1, reflective of the majority of mid-ocean ridge basalts recording $f$O$_2$ around FMQ \parencite{cottrell2021morb}. MORB lavas represent a volatile-poor end-member and position MORB as the most relevant to magma ocean and extraterrestrial model scenarios compared to other basalts examined here. 
+
+Major and volatile element compositions for all other samples are from glassy MI and include CO$_2$ abundances in vapor bubbles within MI. CO$_2$ we report here and use in modeling is the sum of the dissolved CO$_2$ in the melt and the exsolved CO$_2$ in the vapor bubble. Because they record the state of the melt at various points during crystal growth, MI are commonly paired with volatile solubility models to assess magma evolution and degassing patterns, including estimations of pre-eruptive magma conditions. As such, MI provide evidence-based starting conditions for magmatic degassing scenarios.
+
+%% Kīlauea
+Volatile-poor OIBs are represented by Kīlauea volcano, Hawai{\okina}i. The volatile and redox systematics of Kīlauea magmas have been extensively studied using both olivine-hosted MI \parencite{sides2014magma, wieser2021reconstructing, lerner2021petrologic, moore2015bubbles, lerner2021improving, moussallam2016impact, tucker2019high} and submarine glasses \parencite{dixon1991degassing, clague1995petrology}, making them an ideal target for model inter-comparison. It is noteworthy that Kīlauean melts show variable H$_2$O contents, with some eruptions mostly yielding 0.3 wt\%, and others 0.5--1.0 wt\%. To address these variable H$_2$O contents, we performed two different Kīlauea models, Kīlauea `dry' with 0.3 wt\%, and `wet' with 0.6 wt\%. No significant differences were observed between these two runs, and so only the `dry' runs are presented here. The major elements were chosen to be representative of higher MgO (10.2 wt\%) MI corrected for post-entrapment crystallization \parencite{wieser2020chalcophile, wieser2021reconstructing, lerner2021improving}. The chosen initial CO$_2$ concentration of 800 ppm represents the most CO$_2$-rich MI from the 2018 eruption. For S, we use a concentration of 1500 ppm after \textcite{wieser2020chalcophile} and \textcite{sides2014magma}. Fe$^{3+}$/$\Sigma$Fe was set at 0.18 following \textcite{lerner2021petrologic} and $T$ at 1200 \SI{}{\celsius} using the \textcite{helz1987geothermometry} thermometer. 
+
+%% Fuego
+Oxidized H$_2$O-rich arc basalts are represented by Fuego volcano, Guatemala. Fuego MI from the 1974 eruption have up to 4.5 wt\% H$_2$O \parencite{rasmussen2020vapor}, relatively elevated S contents (2650 ppm) with up to 0.7 S$^{6+}$/$\Sigma$S \parencite{taracsak2023sulfur}, and experimentally reconstructed CO$_2$ concentrations up to 3500 ppm \parencite{rasmussen2020vapor}. The major element composition representing Fuego is based on a compilation of data from \textcite{rasmussen2020vapor}, \textcite{lloyd2013}, \textcite{moore2015bubbles}, and \textcite{newcombe2020}, whilst volatiles are from \textcite{rasmussen2020vapor}. Fe$^{3+}$/$\Sigma$Fe was set at 0.24 and $T$ at 1030 \SI{}{\celsius} following \textcite{lloyd2013} and \textcite{Ding2023}.
+
+%% Fogo
+Volatile-rich OIBs are represented by Fogo Volcano, Cabo Verde, an end-member volcano representing one of the world's most volatile- and alkali-rich silica-undersaturated ocean island volcanoes. Fogo magmas have extremely high CO$_2$ and S contents (1.15 wt\% and 4690 ppm, respectively) relative to other OIBs \parencite{devitre2023oceanic}. The major element composition was chosen as the average composition of 5 PEC-corrected melt inclusions from sample FG18 with the highest H$_2$O and CO$_2$ contents \parencite{devitre2023oceanic}. We take the redox conditions to be $\Delta$NNO+0.7, as calculated by \textcite{devitre2023oceanic} using the V partitioning oximeter of \textcite{canil2002vanadium}. All values—majors, volatiles, redox, and $T$—are taken from \textcite{devitre2023oceanic}.
 
 \section{Abbreviations}
 
